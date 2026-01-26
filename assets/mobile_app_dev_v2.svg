@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="layerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="layerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C6FF" />
+      <stop offset="100%" stop-color="#0072FF" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Isometric Bottom Layer (Shadow/Base) -->
+  <path d="M100 160L40 130L100 100L160 130L100 160Z" fill="#0072FF" fill-opacity="0.1" />
+  
+  <!-- Middle Layer 1 -->
+  <path d="M100 140L40 110L100 80L160 110L100 140Z" fill="url(#layerGrad)" fill-opacity="0.6" stroke="white" stroke-width="1" style="filter:url(#layerGlow)">
+    <animate attributeName="d" values="M100 140L40 110L100 80L160 110L100 140Z; M100 145L40 115L100 85L160 115L100 145Z; M100 140L40 110L100 80L160 110L100 140Z" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Middle Layer 2 -->
+  <path d="M100 120L40 90L100 60L160 90L100 120Z" fill="white" fill-opacity="0.2" stroke="white" stroke-width="0.5">
+    <animate attributeName="d" values="M100 120L40 90L100 60L160 90L100 120Z; M100 130L40 100L100 70L160 100L100 120Z; M100 120L40 90L100 60L160 90L100 120Z" dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Top Layer (Glass UI) -->
+  <path d="M100 100L40 70L100 40L160 70L100 100Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="2" style="backdrop-filter: blur(5px); filter:url(#layerGlow)">
+    <animate attributeName="d" values="M100 100L40 70L100 40L160 70L100 100Z; M100 115L40 85L100 55L160 85L100 100Z; M100 100L40 70L100 40L160 70L100 100Z" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Floating UI Bits -->
+  <circle cx="80" cy="70" r="5" fill="#00FFCC">
+    <animate attributeName="cy" values="70; 60; 70" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <rect x="110" y="60" width="20" height="4" rx="2" fill="white" fill-opacity="0.8">
+    <animate attributeName="y" values="60; 50; 60" dur="3.5s" repeatCount="indefinite" />
+  </rect>
+</svg>

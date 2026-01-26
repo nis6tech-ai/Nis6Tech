@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nis6Tech | Future of IT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="webgl"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Nis6Tech Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 1. Hero -->
+        <section id="hero">
+            <div class="hero-visual">
+                <video autoplay muted loop playsinline class="hero-video" onerror="this.style.display='none'">
+                    <source src="assets/your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Motto Transition Section -->
+        <section id="motto-section">
+            <div class="section-container">
+                <h2 class="motto">"Building Reliable Digital Products"</h2>
+                <a href="#contact" class="cta-button primary">Get Started</a>
+            </div>
+        </section>
+
+        <!-- 2. About Us -->
+        <section id="about">
+            <div class="section-container">
+                <h2>Who We Are</h2>
+                <p>At Nis6Tech, we are driven by our core mission: <strong>Building Reliable Digital Products</strong>.
+                    We are a multi-disciplinary technology partner dedicated to excellence across Web and Mobile
+                    development, Digital Marketing, and high-end Visual Arts like VFX and Graphics Design. By
+                    integrating advanced Security Services with creative innovation, we empower businesses to thrive in
+                    a secure and visually stunning digital landscape. Our expertise lies in transforming complex
+                    challenges into seamless, high-performance solutions that define the future of IT.</p>
+            </div>
+        </section>
+
+        <!-- 3. Our Services -->
+        <section id="services">
+            <div class="section-container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/mobile_app_dev_v3.svg" alt="Mobile App Development">
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Crafting seamless experiences for iOS and Android platforms with native performance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/web_dev_ecosystem.svg" alt="Website Development">
+                        </div>
+                        <h3>Website Development</h3>
+                        <p>Building high-performance, responsive websites that scale with your business needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/marketing_ecosystem.svg" alt="Digital Marketing">
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <p>Driving growth through data-driven strategies and high-impact creative campaigns.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/vfx_ecosystem.svg" alt="Video Editing & VFX">
+                        </div>
+                        <h3>Video Editing & VFX</h3>
+                        <p>Transforming raw footage into cinematic masterpieces with cutting-edge VFX and professional
+                            storytelling.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/security_core.svg" alt="Security Services">
+                        </div>
+                        <h3>Security Services</h3>
+                        <p>Protecting your digital assets with advanced protocols and 24/7 monitoring.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/graphics_ecosystem.svg" alt="Graphics Designing">
+                        </div>
+                        <h3>Graphics Designing</h3>
+                        <p>Transforming ideas into high-impact visual identities and modern designs that define your
+                            brand’s future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Our Projects -->
+        <section id="projects">
+            <div class="section-container">
+                <h2>Our Project</h2>
+                <div class="project-slider-wrapper">
+                    <div class="project-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/nasar_portfolio.png" alt="Nasar Portfolio">
+                                <div class="project-overlay">
+                                    <a href="https://nis6tech-ai.github.io/MOHAMED-ZAMAM-NAZAR-Portfolio/"
+                                        target="_blank" class="view-project-btn">View Live Site</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Mohamed Zamam Nazar</h3>
+                                <p>A flagship personal portfolio website featuring immersive 3D interactions and modern
+                                    glassmorphic UI.</p>
+                                <div class="project-tags">
+                                    <span>Personal Portfolio</span>
+                                    <span>3D Interactivity</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/divya_portfolio.png" alt="Divya Portfolio">
+                                <div class="project-overlay">
+                                    <a href="https://lificreations01.github.io/Portfolio/" target="_blank"
+                                        class="view-project-btn">View Live Site</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Divya Lifna G</h3>
+                                <p>An elegant and professional creative portfolio showcasing design expertise and
+                                    impactful
+                                    visual storytelling.</p>
+                                <div class="project-tags">
+                                    <span>Creative Portfolio</span>
+                                    <span>Neon Designing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-controls">
+                    <button class="slider-btn prev" aria-label="Previous Projects">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="slider-btn next" aria-label="Next Projects">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonials -->
+        <section id="testimonials">
+            <div class="section-container">
+                <h2>Voices of Trust</h2>
+                <p class="section-subtitle">Real experiences from those we've partnered with.</p>
+
+                <div class="testimonial-carousel">
+                    <div class="testimonial-track">
+                        <!-- Client 1 -->
+                        <div class="testimonial-card">
+                            <div class="card-glass"></div>
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="feedback">"Overall, I’m happy with how clean and professional the site looks — it
+                                clearly presents my background without confusion. The layout is simple and easy to
+                                navigate. I do think the homepage could communicate my strengths and impact a bit more
+                                strongly with a sharper introduction."</p>
+                            <div class="client-profile">
+                                <div class="client-img">
+                                    <img src="assets/client_nasar.png" alt="M. Mohamed Zamam Nazar">
+                                </div>
+                                <div class="client-meta">
+                                    <h4>M. Mohamed Zamam Nazar</h4>
+                                    <span>Professor at Jamal Mohamed College</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client 2 -->
+                        <div class="testimonial-card">
+                            <div class="card-glass"></div>
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="feedback">"Clean, professional layout covering all essentials. The “View My Work”
+                                and resume download buttons are solid. Tightening up the project showcase to make the
+                                best pieces pop will make it even more compelling and grab attention quickly."</p>
+                            <div class="client-profile">
+                                <div class="client-img">
+                                    <img src="assets/client_divya.jpg" alt="DIVYA LIFNA G">
+                                </div>
+                                <div class="client-meta">
+                                    <h4>DIVYA LIFNA G</h4>
+                                    <span>Content Creator at AK Infopark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats">
+            <div class="section-container">
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <div class="stat-icon pink">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" data-target="3">0</h3>
+                            <span class="stat-plus">+</span>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" data-target="3">0</h3>
+                            <span class="stat-plus">+</span>
+                            <p>Projects Delivered</p>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" data-target="2">0</h3>
+                            <span class="stat-plus">+</span>
+                            <p>Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Let’s Talk Business & 7. Contact Us -->
+        <section id="contact">
+            <div class="section-container">
+                <h2>Contact Us</h2>
+                <div id="contact-wrapper">
+                    <!-- Left: Formspree Form -->
+                    <div class="contact-left">
+                        <h3>Let’s Talk Business</h3>
+                        <form action="https://formspree.io/f/xnjdqldn" method="POST" class="contact-form">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="text" name="phone" placeholder="Phone Number">
+                            <input type="text" name="_subject" placeholder="Subject">
+                            <textarea name="message" rows="5" placeholder="Project Details" required></textarea>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Contact Info -->
+                    <div class="contact-right">
+                        <div class="contact-info-item">
+                            <h3><i class="fa-solid fa-envelope"></i> Email Us</h3>
+                            <p><a href="mailto:nis6tech@gmail.com">nis6tech@gmail.com</a></p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3><i class="fa-solid fa-phone"></i> Call Us</h3>
+                            <p>+965 66870652</p>
+                            <p>+91 8754040131</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3><i class="fa-solid fa-share-nodes"></i> Follow Us On</h3>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/nis6tech/" target="_blank" class="instagram-link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nis6Tech. All Rights Reserved.</p>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="secGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4DB" />
+      <stop offset="100%" stop-color="#0083B0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="100" cy="180" rx="40" ry="10" fill="black" fill-opacity="0.1" />
+
+  <!-- Shield Body -->
+  <path d="M100 30 C100 30 60 40 60 80 C60 120 100 160 100 160 C100 160 140 120 140 80 C140 40 100 30 100 30Z" fill="url(#shieldGrad)" stroke="white" stroke-width="2" filter="url(#secGlow)" />
+  
+  <!-- Padlock Symbol -->
+  <path d="M90 100 H110 V120 H90 Z" fill="white" fill-opacity="0.5" />
+  <path d="M92 100 V90 Q 100 80 108 90 V100" stroke="white" stroke-width="3" fill="none" />
+
+  <!-- Floating Elements -->
+  <!-- 1. Key -->
+  <path d="M160 100 L150 110 M153 107 L157 111" stroke="#00FFCC" stroke-width="4" stroke-linecap="round" filter="url(#secGlow)">
+     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-15; 0,0" dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- 2. Radar pulse -->
+  <circle cx="100" cy="100" r="50" stroke="white" stroke-width="1" style="opacity:0.2">
+    <animate attributeName="r" values="50; 80" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.2; 0" dur="2s" repeatCount="indefinite" />
+  </circle>
+
+</svg>

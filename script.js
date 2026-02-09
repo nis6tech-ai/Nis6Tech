@@ -252,6 +252,34 @@ let startTestimonialX;
 let testimonialScrollLeft;
 
 if (testimonialCarousel) {
+    const dots = document.querySelectorAll('.dot');
+    const cardWidth = 600 + 48; // Card width + gap (3rem)
+
+    // Handle initial active state
+    if (dots.length > 0) dots[0].classList.add('active');
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Update active class
+            dots.forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+
+            // Scroll to position
+            testimonialCarousel.scrollTo({
+                left: cardWidth * index,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    testimonialCarousel.addEventListener('scroll', () => {
+        const scrollIndex = Math.round(testimonialCarousel.scrollLeft / cardWidth);
+        if (dots[scrollIndex]) {
+            dots.forEach(d => d.classList.remove('active'));
+            dots[scrollIndex].classList.add('active');
+        }
+    });
+
     testimonialCarousel.addEventListener('mousedown', (e) => {
         isTestimonialDown = true;
         testimonialCarousel.style.cursor = 'grabbing';

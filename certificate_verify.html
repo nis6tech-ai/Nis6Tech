@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate | Nis6Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/certificate.css">
+</head>
+
+<body>
+    <!-- Partial Nav (Simplified) -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Nis6Tech Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="verify-container">
+        <div class="system-card">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Certificate Verification</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                Enter the unique Certificate ID to verify the authenticity of a Nis6Tech issued certificate.
+            </p>
+
+            <div class="form-group">
+                <label for="certIdInput">Certificate ID</label>
+                <input type="text" id="certIdInput" class="form-control" placeholder="e.g. CERT-2026-0001">
+            </div>
+
+            <button id="verifyBtn" class="cta-button primary btn-block">Verify Certificate</button>
+
+            <!-- Results Display -->
+            <div id="verificationResult" class="verification-result">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 2rem;">&copy; 2026 Nis6Tech. Verification System.</p>
+    </footer>
+
+    <script type="module">
+        import './assets/js/certificate-system.js';
+
+        // Wait for module to load and expose window functions
+        window.addEventListener('load', () => {
+            if (window.initVerificationPage) {
+                window.initVerificationPage();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+/* Certificate System Styles */
+:root {
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --revoked-color: #6c757d;
+}
+
+/* Page Specific Layouts */
+.auth-container,
+.verify-container,
+.admin-container {
+    padding: 8rem 5% 4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    cursor: auto !important;
+    /* Restore cursor since custom cursor JS isn't loaded here */
+}
+
+.system-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Buttons */
+.btn-block {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Verification Result */
+.verification-result {
+    margin-top: 2rem;
+    display: none;
+    /* Hidden by default */
+}
+
+.cert-card {
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-bad {
+    border-color: var(--error-color);
+}
+
+.cert-status {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-verified {
+    background: var(--success-color);
+}
+
+.status-revoked {
+    background: var(--revoked-color);
+}
+
+.status-invalid {
+    background: var(--error-color);
+}
+
+.cert-detail-row {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.cert-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.cert-value {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Admin Specific */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+}
+
+.admin-dashboard-card {
+    max-width: 1000px;
+}
+
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.cert-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.cert-table th,
+.cert-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cert-table th {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.cert-table tr:hover {
+    background: rgba(0, 123, 255, 0.02);
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+    margin: 0 0.2rem;
+}
+
+.action-btn:hover {
+    color: var(--primary-color);
+}
+
+.action-btn.delete:hover {
+    color: var(--error-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
